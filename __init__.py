@@ -61,6 +61,5 @@ def srccompile_file(fdir, urldir, cache, readfile, config):
   cache[url] = data
 
   if url.endswith('/index.html'):
-    new_url = url[:-11]
-    cache[['','/'][len(new_url)==0]+new_url] = data
+    cache[url[:-10]] = data
 
