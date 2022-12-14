@@ -45,7 +45,9 @@ def srccompile_file(fdir, urldir, cache, readfile, config):
     
     if not dedent(line) == '':
       line = '<' + line
-    print(line)
+    
+    if config['verbose']:
+      print(line)
     psh_out.append(line)
     
   data = {'mime': 'text/html', 'cont': '\n'.join(psh_out)}
