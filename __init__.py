@@ -51,7 +51,7 @@ def srccompile_file(fdir, urldir, cache, readfile, config):
     psh_out.append(line)
     
   data = {'mime': 'text/html', 'cont': '\n'.join(psh_out)}
-    
+  
   url = urldir[4:][:-4]+'.html'
   # if url == '/index.html':
     # url = '/'
@@ -64,5 +64,5 @@ def srccompile_file(fdir, urldir, cache, readfile, config):
     cache['/'] = data
     
   elif url.endswith('/index.html'):
-    cache[url[:-11]] = data
+    cache[url[:-10]] = data
 
